@@ -12,9 +12,7 @@ const NavigationBar: FC<NavigationBarProps> = ({ active }) => {
     <>
       <Navbar isBordered variant="floating">
         <Navbar.Brand css={{ width: 40, height: 40 }}>
-          {/* <Text b color="inherit"> */}
           <Logo className={styles.logo} />
-          {/* </Text> */}
         </Navbar.Brand>
         <Navbar.Content>
           <Navbar.Item>
