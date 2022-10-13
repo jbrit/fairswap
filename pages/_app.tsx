@@ -5,6 +5,7 @@ import { Web3Provider } from "@ethersproject/providers";
 import { WagmiConfig } from "wagmi";
 import { RainbowKitProvider } from "@rainbow-me/rainbowkit";
 import { chains, wagmiClient } from "$utils/rainbow";
+import { NextUIProvider } from "@nextui-org/react";
 
 function getLibrary(provider: any): Web3Provider {
   const library = new Web3Provider(provider);
@@ -14,13 +15,15 @@ function getLibrary(provider: any): Web3Provider {
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <Web3ReactProvider getLibrary={getLibrary}>
-      <WagmiConfig client={wagmiClient}>
-        <RainbowKitProvider chains={chains}>
-          <Component {...pageProps} />
-        </RainbowKitProvider>
-      </WagmiConfig>
-    </Web3ReactProvider>
+    <NextUIProvider>
+      <Web3ReactProvider getLibrary={getLibrary}>
+        <WagmiConfig client={wagmiClient}>
+          <RainbowKitProvider chains={chains}>
+            <Component {...pageProps} />
+          </RainbowKitProvider>
+        </WagmiConfig>
+      </Web3ReactProvider>
+    </NextUIProvider>
   );
 }
 

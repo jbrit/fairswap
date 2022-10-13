@@ -1,0 +1,89 @@
+.swapPage {
+  padding: 0 10px;
+}
+.tokenList {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  list-style: none;
+  margin: 0;
+  padding-top: 16px;
+  max-height: 483px;
+  overflow: auto;
+}
+.tokenListItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.tokenListItemSelected {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #f1f3f5;
+  transition: all 0.3s ease-in-out;
+}
+.tokenListItem:hover {
+  background-color: #f1f3f5;
+}
+.img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+.swapInputContainer {
+  position: relative;
+  width: 100%;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+}
+.switchIcon {
+  background-color: rgb(247, 248, 250);
+  height: 32px;
+  width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -10px auto;
+  border-radius: 12px;
+  position: relative;
+  z-index: 100;
+  border: 4px solid rgb(255, 255, 255);
+  cursor: pointer;
+}
+.swapValue {
+  width: 80%;
+  height: 100%;
+}
+.swapToken {
+  width: max-content;
+  top: 0;
+  right: 0;
+}
+.swapInput {
+  font-size: 28px;
+  font-family: Roboto Mono, monospace;
+  margin: 0 !important;
+  border: 0;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+}
+.settingsInput {
+  background-color: #f1f3f5;
+  border-radius: 0.5rem;
+  height: 32px;
+  width: 100%;
+  border: 0;
+  padding: 10px;
+  font-size: 0.8rem;
+  outline: none;
+}
