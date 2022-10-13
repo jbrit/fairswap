@@ -1,18 +1,20 @@
+import Logo from "$svgs/logo";
 import { Button, Navbar, Switch, Text } from "@nextui-org/react";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import Link from "next/link";
 import { FC } from "react";
 import { VariantsNavigationBarWrapper } from "./NavigationBar.styles";
 import { NavigationBarProps } from "./NavigationBar.types";
+import styles from "$styles/Swap.module.css";
 
 const NavigationBar: FC<NavigationBarProps> = ({ active }) => {
   return (
     <>
       <Navbar isBordered variant="floating">
-        <Navbar.Brand>
-          <Text b color="inherit">
-            FS
-          </Text>
+        <Navbar.Brand css={{ width: 40, height: 40 }}>
+          {/* <Text b color="inherit"> */}
+          <Logo className={styles.logo} />
+          {/* </Text> */}
         </Navbar.Brand>
         <Navbar.Content>
           <Navbar.Item>
